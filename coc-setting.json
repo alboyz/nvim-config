@@ -1,0 +1,12 @@
+{  
+  "codeLens.enable":true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python",
+    "javascript"
+  ],
+
+  "python.linting.pylintEnabled":true,
+  "eslint.enable":true,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"]
+}
