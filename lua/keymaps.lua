@@ -1,5 +1,5 @@
--- set leader key to space
-vim.g.mapleader = " "
+-- set leader key to colon
+vim.g.mapleader = ";"
 
 local keymap = vim.keymap -- for conciseness
 
@@ -32,6 +32,6 @@ keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) 
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- copy
-vim.api.nvim_set_keymap("v", "<c-c>", '"*y :let @+=@*<CR>', {noremap=true, silent=true})
+vim.api.nvim_set_keymap("v", "<c-c>", '"*y :let @+=@*<CR>', { noremap = true, silent = true })
 --visual mode
 vim.api.nvim_set_keymap("n", "vv", "<c-v>", { desc = "Visual block" })

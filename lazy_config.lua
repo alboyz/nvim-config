@@ -10,8 +10,4 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
-
-require "keymaps"
-require "options"
-require("lazy").setup({ { import = "conf.plugins" }, { import = "conf.plugins.lsp" } })
+require("lazy").setup({ { import = "conf.plugins" }, { import = "conf.plugins.lsp" }})

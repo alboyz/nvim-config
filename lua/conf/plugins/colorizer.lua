@@ -8,6 +8,7 @@ return {
 			"javascript",
 			"html",
 			"php",
+			"lua",
 
 			DEFAULT_OPTIONS = {
 				RGB = true, -- #RGB hex codes

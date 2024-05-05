@@ -36,6 +36,9 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons' " optional
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+
 
 call plug#end()
 
@@ -47,9 +50,6 @@ lua require('mynamespace.lualine')
 lua require('mynamespace.nvim-tree')
 lua require('mynamespace.nvim_web_devicons')
 lua require('mynamespace.lspconfig')
+lua require('mynamespace.mason')
 
 
-"Configuring lualine in init.vim
-lua << END
-require('lualine').setup()
-END

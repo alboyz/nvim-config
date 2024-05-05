@@ -32,7 +32,7 @@ return {
       {
         name = 'emmet_vim',
         option = {
-            filetypes = { 'php' },
+            filetypes = { 'blade.php' },
         }
       },
       mapping = cmp.mapping.preset.insert({
