@@ -309,3 +309,36 @@ return {
 Sekarang, jika Anda menghadapi eror pencarian atau kesalahan sintaks internal Neovim, kotak merah tersebut tidak akan kabur atau hilang sendiri sebelum Anda selesai membacanya!
 
 ---
+
+## Question ketika ketik nvim di terminal selalu first impresion muncul lazyvim, berbebeda dengan saya ketik nvim nama_file.cpp tidak ada start up lazy vim, saya tidak suka ada start up lazy vim ketika membuka lazyvim, tapi saya pake lazyvim untuk package manager neoviom
+
+Bisa dimengerti, tampilan awal (_dashboard_) itu memang bisa terasa mengganggu kalau Anda hanya ingin masuk ke editor kosong yang bersih saat mengetik `nvim` tanpa nama file.
+
+Di LazyVim, tampilan halaman utama tersebut diatur oleh plugin bernama **Alpha** (atau **Dashboard-nvim**, tergantung versi LazyVim yang Anda pakai). Tampilan itu sengaja dilewati secara otomatis oleh Neovim jika Anda langsung membuka file spesifik (seperti `nvim nama_file.cpp`), karena Neovim langsung fokus memuat buffer file tersebut.
+
+Jika Anda ingin **mematikan total** halaman _startup_ tersebut agar ketika mengetik `nvim` saja yang muncul adalah editor kosong yang bersih, Anda bisa menonaktifkan plugin dashboard-nya.
+
+---
+
+### Cara Mematikan Tampilan Startup Dashboard
+
+Sesuai dengan struktur LazyVim Anda, buat sebuah file baru untuk menonaktifkan plugin dashboard bawaan tersebut.
+
+1. Buat file baru bernama `dashboard.lua` di dalam folder plugins Anda:
+   `C:\Users\Wind\AppData\local\nvim\lua\plugins\dashboard.lua`
+2. Masukkan kode berikut ke dalamnya untuk mematikan plugin dashboard bawaan:
+
+```lua
+return {
+  -- Mematikan plugin dashboard bawaan (alpha.nvim atau dashboard-nvim)
+  { "goolord/alpha-nvim", enabled = false },
+  { "nvimdev/dashboard-nvim", enabled = false },
+}
+
+```
+
+3. Simpan file tersebut, lalu restart Neovim Anda.
+
+Sekarang, baik ketika Anda mengetik `nvim` maupun `nvim nama_file.cpp`, Anda akan langsung dihadapkan pada layar editor kosong yang bersih tanpa ada logo atau menu _startup_ LazyVim lagi, namun semua fungsi _package manager_ Anda tetap berjalan 100% normal di latar belakang!
+---
+
