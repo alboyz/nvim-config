@@ -1,0 +1,8 @@
+{
+  "emmet.includeLanguages": {
+    "norg": "html",
+    "markdown": "html",
+    "php": "html"
+  },
+  "emmet.excludeLanguages": []
+}
